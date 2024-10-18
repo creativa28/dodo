@@ -1,5 +1,4 @@
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:2780662923.
 import 'package:flutter/material.dart';
 
 class Registro extends StatelessWidget {
