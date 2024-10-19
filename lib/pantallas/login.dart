@@ -1,6 +1,8 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/bienvenido.dart';
+import 'package:myapp/pantallas/recuperarcuenta.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -131,7 +133,15 @@ class Login extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 0),
                   child: Align(
                     alignment: Alignment.centerRight,
-                    child: Text(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => recuperarcuenta()),
+                        );
+                      },
+                      child: Text(
                       "Recupera tu clave",
                       textAlign: TextAlign.start,
                       overflow: TextOverflow.clip,
@@ -142,10 +152,16 @@ class Login extends StatelessWidget {
                         color: Color(0xff313131),
                       ),
                     ),
+                    ),
                   ),
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => bienvenido()),
+                    );
+                  },
                   color: Color(0xffc97fdb),
                   elevation: 0,
                   shape: RoundedRectangleBorder(

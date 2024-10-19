@@ -1,6 +1,7 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/login.dart';
 
 class recuperarcuenta extends StatelessWidget {
   @override
@@ -161,7 +162,12 @@ class recuperarcuenta extends StatelessWidget {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                    );
+                  },
                   color: Color(0xffc57cd8),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
@@ -169,7 +175,7 @@ class recuperarcuenta extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(16),
                   child: Text(
-                    "Continue",
+                    "Continuar",
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,

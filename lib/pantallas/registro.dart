@@ -1,5 +1,7 @@
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:2780662923.
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/login.dart';
+import 'package:myapp/pantallas/perfil.dart';
 
 class Registro extends StatelessWidget {
   @override
@@ -215,7 +217,13 @@ class Registro extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                         child: MaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Perfil()),
+                            );
+                          },
                           color: Color(0xffc87edb),
                           elevation: 0,
                           shape: RoundedRectangleBorder(
@@ -257,7 +265,15 @@ class Registro extends StatelessWidget {
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
-                              child: Text(
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Login()),
+                                  );
+                                },
+                                child: Text(
                                 "Ingresa",
                                 textAlign: TextAlign.start,
                                 overflow: TextOverflow.clip,
@@ -268,6 +284,7 @@ class Registro extends StatelessWidget {
                                   color: Color(0xff313131),
                                 ),
                               ),
+                              )
                             ),
                           ],
                         ),
