@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pantallas/bienvenido.dart';
+import 'package:myapp/pantallas/calculadora.dart';
+import 'package:myapp/pantallas/herramientas.dart';
 import 'package:myapp/pantallas/login.dart';
 import 'package:myapp/pantallas/paginapro.dart';
 import 'package:myapp/pantallas/perfil.dart';
 import 'package:myapp/pantallas/recuperarcuenta.dart';
 import 'package:myapp/pantallas/registro.dart';
+import 'package:myapp/pantallas/tipsgenerales.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
 
 
 
-      home: Registro(),
+      home: bienvenido(),
 
 
 

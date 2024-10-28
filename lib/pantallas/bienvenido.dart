@@ -1,6 +1,7 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/calculadora.dart';
 
 class bienvenido extends StatelessWidget {
   @override
@@ -62,7 +63,12 @@ class bienvenido extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => calculadora()),
+                    );
+                  },
                   color: Color(0xff662d90),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
