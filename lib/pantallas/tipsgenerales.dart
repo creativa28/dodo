@@ -7,7 +7,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class tipsgenerales extends StatelessWidget {
   final pageController = PageController();
 
-  List<String> carruselImagenes = [
+  final List<String> carruselImagenes = [
     "images/tip_1.png",
     "images/tip_2.png",
     "images/tip_3.png",
