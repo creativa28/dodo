@@ -1,6 +1,8 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/calculadora.dart';
+import 'package:myapp/pantallas/herramientas.dart';
 
 class Perfil extends StatelessWidget {
   @override
@@ -205,6 +207,43 @@ class Perfil extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Pefil',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: 'Calculadora',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.description),
+            label: 'Herramientas',
+          ),
+        ],
+        currentIndex: 1,
+        selectedItemColor: Color(0xff602b88),
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Perfil()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => calculadora()),
+            );
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => herramientas()),
+            );
+          }
+          // Handle item tap
+        },
       ),
     );
   }

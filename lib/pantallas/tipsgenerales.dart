@@ -1,10 +1,7 @@
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:myapp/pantallas/calculadora.dart';
+import 'package:myapp/pantallas/herramientas.dart';
+import 'package:myapp/pantallas/perfil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class tipsgenerales extends StatelessWidget {
@@ -193,7 +190,6 @@ class tipsgenerales extends StatelessWidget {
                                           height: 300,
                                           width: 300,
                                           fit: BoxFit.cover,
-                                      
                                         ),
                                       );
                                     },
@@ -257,6 +253,42 @@ class tipsgenerales extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Perfil',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: 'Calculadora',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.description),
+            label: 'Herramientas',
+          ),
+        ],
+        currentIndex: 1,
+        selectedItemColor: Color(0xff602b88),
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Perfil()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => calculadora()),
+            );
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => herramientas()),
+            );
+          }
+        },
       ),
     );
   }
